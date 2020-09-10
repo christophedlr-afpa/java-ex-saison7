@@ -17,9 +17,31 @@ public class Main {
         option = Integer.parseInt(m.reader.readLine());
 
         if (option == 1) {
+            m.algo74();
         } else if (option == 2) {
             m.algo77();
         }
+    }
+
+    public void algo74() throws IOException {
+        int val;
+        List<Integer> array = new ArrayList<Integer>();
+
+        array.add(12);
+        array.add(8);
+        array.add(4);
+        array.add(45);
+        array.add(64);
+        array.add(9);
+        array.add(2); 
+
+        System.out.println("Le tableau : "+array);
+        System.out.print("Choisissez une position dans le tableau : ");
+        val = Integer.parseInt(reader.readLine());
+
+        array.remove(val);
+
+        System.out.println("Le nouveau tableau : "+array);
     }
 
     public void algo77() {
