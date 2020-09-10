@@ -1,0 +1,35 @@
+ALGORITHME ex-7.7
+
+    VARIABLES
+        arrayFirst[10, 42, 84]: numérique
+        arraySecond[2, 34, 110]: numérique
+        newArray[]: numérique
+        pos: numérique = 0
+        temp: numérique = 0
+
+    DEBUT
+        ECRIRE "Le premier tableau est : "&arrayFirst
+        ECRIRE "Le second tableau est : "&arraySecond
+
+        POUR i 0 à taille arrayFirst
+            newArray[i] = arrayFirst[i]
+        FIN POUR
+
+        POUR i 0 à taille arraySecond
+            newArray[i] = arraySecond[i]
+        FIN POUR
+
+        POUR x 0 à taille newArray
+            POUR j x à taille newArray
+                SI newArray(j) est inférieur à newArray(x)
+                    pos = j
+                    temp = newArray(pos)
+                    newArray(pos) = newArray(x)
+                    newArray(x) = temp
+            FIN POUR
+        FIN POUR
+
+        ECRIRE "Le troisième tableau est : "
+        ECRIRE contenu de newArray
+    FIN
+FIN ex-7.7
